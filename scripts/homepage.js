@@ -41,6 +41,14 @@ $(function () {
     window.location.href = $(this).attr('data-href');
   });
 
+  $('#language-pl').on('click', function () {
+    document.location.href = 'pl.html';
+  });
+
+  $('#language-eng').on('click', function () {
+    document.location.href = 'eng.html';
+  });
+
   SyntaxHighlighter.all();
 
 });
