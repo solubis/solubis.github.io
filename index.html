@@ -1,53 +1,22 @@
----
-layout: home
-title: Solubis - Mobile and Desktop Web Development
----
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
 
-<!--div class="sixteen column row">
+<script>
+    var language = window.navigator.userLanguage || window.navigator.language;
+
+    if (language.indexOf('pl') > -1) {
+        document.location.href = 'pl.html';
+    } else {
+        document.location.href = 'eng.html';
+    }
+</script>
+
+<body>
 
 
-    <div class="eight wide column">
-        <div class="ui ribbon purple label">Lates article</div>
-        <h2 class="ui header">How to Win Your Cats Attention</h2>
-
-        <p>Getting your cat to notice you is a large part of being a pet owner. Although I have a lot of
-            patience
-            for writing things about cats, perhaps this might be enough body copy to make this section of
-            text
-            look
-            filled out.</p>
-
-        <p>This and other tips can be found in our newsletter, amazing right?</p>
-
-        <div class="ui basic inverted animated button">
-            <div class="visible content">Read More</div>
-            <div class="hidden content"><i class="right arrow icon"></i></div>
-        </div>
-    </div>
-
-    <div class="eight wide column">
-
-        <div class="ui ribbon red label">More articles</div>
-
-        <div class="ui animated list">
-
-            {% for post in site.posts %}
-
-            <div class="item">
-                <a href="{{ post.url }}" class="content">
-                    <div class="header">{{ post.title }}</div>
-                    This and other tips can be found in our newsletter, amazing right?
-                </a>
-            </div>
-
-            {% endfor %}
-        </div>
-
-        <div class="ui animated inverted basic button">
-            <div class="visible content">See All</div>
-            <div class="hidden content"><i class="right arrow icon"></i></div>
-        </div>
-
-    </div>
-
-</div-->
+</body>
+</html>
