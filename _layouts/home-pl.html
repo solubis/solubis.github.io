@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-{% include header.html %}
-
-<script>
-    var language = window.navigator.userLanguage || window.navigator.language;
-
-    if (language.indexOf('pl') > -1) {
-        document.location.href = 'pl.html'
-    }
-</script>
+{% include header-pl.html %}
 
 <body id="home">
 
-{% include menu.html %}
+{% include menu-pl.html %}
 
-{% include modal.html %}
+{% include modal-pl.html %}
 
 <!--------------------  BANNER  -------------------->
 
@@ -23,10 +15,11 @@
     <div class="column">
         <div class="ui hidden transition information">
             <h1 class="ui inverted header">
-                We build web applications
+                Budujemy nowoczesne aplikacje internetowe
             </h1>
 
-            <h3>Desktop and mobile apps using cutting edge technologies and with great User Experience</h3>
+            <h3>Aplikacje przeglądarkowe i mobilne przy użyciu najnowszych technologii i cechujące się wygodą
+                użytkowania.</h3>
         </div>
     </div>
 </div>
@@ -37,7 +30,7 @@
     <div class="one column row">
         <div class="column">
             <h1 class="center aligned ui header">
-                Services
+                Nasze Usługi
             </h1>
         </div>
 
@@ -47,28 +40,29 @@
             <div class="column">
                 <div class="ui icon header">
                     <i class="circular desktop inverted blue icon"></i>
-                    Desktop Web Applications
+                    Aplikacje internetowe
                 </div>
-                <p>We design and build Desktop Web Applications, Chrome Applications and Extensions.
-                    We specialize in <strong>business applications</strong> - transactional database
-                    systems.</p>
+                <p>Projektujemy i budujemy aplikacje internetowe, rozszerzenia Chrome i Firefox.
+                    Specjalizujemy się w <strong>aplikacjach biznesowych</strong> - transakcyjnych systemach baz danych
+                </p>
             </div>
             <div class="column">
                 <div class="ui icon header">
                     <i class="circular mobile red inverted icon"></i>
-                    Mobile Applications
+                    Aplikacje mobilne
                 </div>
-                <p>We design and build mobile applications - native, hybrid or web - depends on requirements.
-                    Mobile app can be a separate product or extension of Desktop Web Application.
+                <p>Projektujemy i budujemy aplikacje mobilne - natywne, hybrydowe lub internetowe - w
+                    zależności od potrzeb. Aplikacja mobilna może być odrębnym produktem lub stanowić rozszerzenie
+                    aplikacji internetowej.
                 </p>
             </div>
             <div class="column">
                 <div class="ui icon header">
                     <i class="circular icon users inverted green "></i>
-                    Consulting
+                    Doradztwo
                 </div>
-                <p>We provide variety of consulting services for our customers - project management, training,
-                    auditing. </p>
+                <p>Oferujemy szereg usług doradczych dla naszych klientów - zarządzanie projektami,
+                    szkolenia, audyty, prace projektowe i programistyczne. </p>
             </div>
         </div>
 
@@ -80,31 +74,29 @@
 <div id="about" class="ui page inverted grid purple relaxed overview segment">
     <div class="column">
         <h1 class="center aligned ui header">
-            About Us
+            O Nas
         </h1>
 
-        <p><strong>We are group of web technologies enthusiasts. </strong></p>
+        <p><strong>Jesteśmy grupą pasjonatów technologii internetowych. </strong></p>
 
         <p>
-            Our leader, Jurek Błaszczyk, participated in largest IT projects in Poland.
-            After years of building critical systems (eg. electronic banking) with corporations such as
-            Infovide-Matrix and Asseco,
-            he decided to build his own team dedicated to smaller business systems which are characterized by ease of
-            use,
-            simplicity and efficiency.
+            Nasz lider, Jurek Błaszczyk, uczestniczył w największych projektach informatycznych w Polsce. Po
+            latach budowania systemów klasy Enterprise (np. bankowość elektroniczna) dla korporacji, takich jak
+            Infovide-Matrix i Asseco, postanowił zbudować własny zespół dedykowany do tworzenia mniejszych systemów
+            biznesowych, które charakteryzują się łatwością użytkowania, prostotą i skutecznością.
         </p>
 
         <p>
-            Since 2010 we have worked on a prototype of the CRM system for iOS, the visualization system components of
-            the corporate network, application for the equipment management and application for debt collection.
+            Od 2010 roku nasz zespół pracował nad prototypem systemu CRM dla iOS, systemem wizualizacji sieci
+            korporacyjnych, aplikacją do zarządzania sprzętem i aplikacją do ściągania należności.
         </p>
 
         <p>
-            Our team is small and agile. We use modern technologies to build powerful web applications with rich user
-            interface.
-            In our projects we use agile project management methodology working closely with the client to build
-            products that meet business and usability requirements.
-            We provide a full production cycle - from design to implementation and maintenance.
+            Nasz zespół jest mały i zwinny. Korzystamy z nowoczesnych technologii do budowy zaawansowanych
+            aplikacji internetowych z bogatym interfejsem użytkownika. W naszych projektach wykorzystujemy
+            zwinne metodyki zarządzania projektami, ściśle współpracujemy z klientem, aby stworzyć produkty, które
+            spełniają wymagania biznesowe i użytkowe. Zapewniamy pełny cykl produkcyjny - od projektu do
+            wdrożenia i utrzymania.
         </p>
 
 
@@ -117,7 +109,7 @@
     <div class="one column row">
         <div class="column">
             <h1 class="center aligned ui header">
-                Our Strengths
+                Nasze Atuty
             </h1>
         </div>
     </div>
@@ -126,31 +118,35 @@
             <div class="column">
                 <div class="ui icon header">
                     <i class="circular doctor red inverted icon"></i>
-                    Quality
+                    Jakość
                 </div>
-                <p>We use Test Driven Development, Unit Testing, End To End Testing, performance testing, source code
-                    analysis, auditing etc.
-                    The result is rock solid software that passes even most rigorous Acceptance Tests</p>
+                <p>Używamy wytwarzania sterowanego testami (Test Driven Development - TDD), wykorzystujemy testy
+                    jednostkowe, integracyjne,
+                    wydajnościowe, analizę kodu źródłowego, audyty itp. Wynikiem jest doskonała jakość oprogramowania,
+                    które
+                    przechodzi nawet najbardziej rygorystyczne testy akceptacyjne.</p>
             </div>
 
 
             <div class="column">
                 <div class="ui icon header">
                     <i class="circular user purple inverted icon"></i>
-                    User Experience
+                    Wygoda Użytkownika (User Experience)
                 </div>
-                <p>We design and build our applications with User Experience as a priority.
-                    The result is software that users <strong>WANT TO USE</strong> and not just NEED.</p>
+                <p>Projektujemy i budujemy nasze aplikacje traktując User Experience jako
+                    najwyższy priorytet. Rezultatem jest oprogramowanie, które
+                    użytkownicy <strong>chcą używać</strong> a nie tylko
+                    potrzebują.</p>
             </div>
 
             <div class="column">
                 <div class="ui icon header">
                     <i class="circular tasks blue inverted icon"></i>
-                    Project Management
+                    Zarządzanie Projektami
                 </div>
-                <p>We have over 15 years experience in managing large and small IT projects.
-                    We are able to manage teams of client staff and subcontractors controlling quality, time, and budget
-                    using PRINCE, Scrum and client specific methodologies.</p>
+                <p>Mamy ponad 15-letnie doświadczenie w zarządzaniu dużych i małych projektów
+                    informatycznych. Jesteśmy w stanie zarządzać zespołami pracowników klienta i
+                    podwykonawców kontrolując jakość, czas i budżet za pomocą metodyk PRINCE, Scrum i innych.</p>
             </div>
         </div>
     </div>
@@ -158,12 +154,13 @@
 
 <!--------------------  WHAT WE DID  -------------------->
 
+
 <div id="portfolio" class="ui page relaxed overview segment">
 
     <div class="one column row">
         <div class="column">
             <h1 class="center aligned ui header">
-                What We Did
+                Co Zrobiliśmy
             </h1>
         </div>
     </div>
@@ -181,7 +178,7 @@
                             <div class="center">
                                 <i class="circular unhide inverted red large icon"></i>
 
-                                <h2 class="ui header">Show More</h2>
+                                <h2 class="ui header">Pokaż więcej</h2>
                             </div>
                         </div>
                     </div>
@@ -191,11 +188,11 @@
 
                 <div class="content">
                     <a class="star ui ribbon red label">
-                        Mobile
+                        Mobilna
                     </a>
 
                     <div class="name">CRM</div>
-                    <p class="description">Mobile Web Application for iOS</p>
+                    <p class="description">Internetowa aplikacja mobilna dla iOS</p>
                 </div>
 
             </div>
@@ -210,7 +207,7 @@
                             <div class="center">
                                 <i class="circular unhide inverted red large icon"></i>
 
-                                <h2 class="ui header">Show More</h2>
+                                <h2 class="ui header">Pokaż więcej</h2>
                             </div>
                         </div>
                     </div>
@@ -220,11 +217,11 @@
 
                 <div class="content">
                     <a class="star ui ribbon red label">
-                        Mobile
+                        Mobilna
                     </a>
 
-                    <div class="name">Debt Collector</div>
-                    <p class="description">Native Android application for debt collection</p>
+                    <div class="name">Kolektor długów</div>
+                    <p class="description">Natywna aplikacja Android do ściągania należności</p>
                 </div>
             </div>
 
@@ -238,7 +235,7 @@
                             <div class="center">
                                 <i class="circular unhide inverted purple large icon"></i>
 
-                                <h2 class="ui header">Show More</h2>
+                                <h2 class="ui header">Pokaż więcej</h2>
                             </div>
                         </div>
                     </div>
@@ -248,11 +245,11 @@
 
                 <div class="content">
                     <a class="star ui ribbon purple label">
-                        Desktop
+                        Internetowa
                     </a>
 
                     <div class="name">Sequis</div>
-                    <p class="description">Web Application for equipment maintenance</p>
+                    <p class="description">Aplikacja do inwentaryzacji sprzętu</p>
                 </div>
 
             </div>
@@ -267,7 +264,7 @@
                             <div class="center">
                                 <i class="circular unhide inverted purple large icon"></i>
 
-                                <h2 class="ui header">Show More</h2>
+                                <h2 class="ui header">Pokaż więcej</h2>
                             </div>
                         </div>
                     </div>
@@ -277,11 +274,11 @@
 
                 <div class="content">
                     <a class="star ui ribbon purple label">
-                        Desktop
+                        Internetowa
                     </a>
 
-                    <div class="name">Net Graph</div>
-                    <p class="description">Web Application for network visualization</p>
+                    <div class="name">Wykres netto</div>
+                    <p class="description">Aplikacja do wizualizacji sieci</p>
                 </div>
 
             </div>
@@ -300,7 +297,70 @@
         </div>
     </div>
 
-    {{ content }}
+    <!--div class="sixteen column row">
+
+
+    <div class="eight wide column">
+        <div class="ui ribbon purple label">Lates article</div>
+        <h2 class="ui header">How to Win Your Cats Attention</h2>
+
+        <p>Getting your cat to notice you is a large part of being a pet owner. Although I have a lot of
+            patience
+            for writing things about cats, perhaps this might be enough body copy to make this section of
+            text
+            look
+            filled out.</p>
+
+        <p>This and other tips can be found in our newsletter, amazing right?</p>
+
+        <div class="ui basic inverted animated button">
+            <div class="visible content">Read More</div>
+            <div class="hidden content"><i class="right arrow icon"></i></div>
+        </div>
+    </div>
+
+    <div class="eight wide column">
+
+        <div class="ui ribbon red label">More articles</div>
+
+        <div class="ui animated list">
+
+
+
+            <div class="item">
+                <a href="/2014/02/10/welcome-to-jekyll.html" class="content">
+                    <div class="header">Syntax highlighter CSS</div>
+                    This and other tips can be found in our newsletter, amazing right?
+                </a>
+            </div>
+
+
+
+            <div class="item">
+                <a href="/2014/02/09/welcome-to-jekyll.html" class="content">
+                    <div class="header">Syntax highlighter HTML</div>
+                    This and other tips can be found in our newsletter, amazing right?
+                </a>
+            </div>
+
+
+
+            <div class="item">
+                <a href="/2014/02/08/welcome-to-jekyll.html" class="content">
+                    <div class="header">Syntax highlighter JavaScript</div>
+                    This and other tips can be found in our newsletter, amazing right?
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="ui animated inverted basic button">
+            <div class="visible content">See All</div>
+            <div class="hidden content"><i class="right arrow icon"></i></div>
+        </div>
+
+    </div>
 
 </div-->
 
@@ -310,43 +370,45 @@
 <div id="architecture" class="ui page inverted grid relaxed overview segment">
     <div class="column">
         <h1 class="center aligned ui header">
-            How We Do It
+            Jak To Robimy
         </h1>
 
-        <p>We believe in some important modern web trends:</p>
+        <p>Stosujemy niektóre ważne współczesne trendy w architekturze aplikacji internetowych:</p>
 
-        <p><strong>Single Page Applications</strong> - applications built using lots of JavaScript code on client side.
-            User Interface is rendered
-            and displayed without roundtrips to server. We communicate with server only for data - no HTML is rendered
-            by server.
-            We implement this architecture using AngularJS with JSON REST services. Benefits are obvious - applications
-            behave like native desktop
-            applications -
-            UI is fast and responsive, users don't wait for operations.
+        <p><strong>Aplikacje "Jednej Strony" (Single Page Apps)</strong> - Aplikacje zbudowane przy
+            użyciu dużej ilości kodu JavaScript po stronie klienta. Interfejs użytkownika jest generowany i
+            wyświetlany bez komunikacji z serwerem. Z serwera przesyłamy tylko dane. Realizujemy tę architekturę z
+            wykorzystaniem AngularJS i usług JSON
+            REST. Korzyści są oczywiste - aplikacje zachowują się jak natywne aplikacje systemu operacyjnego - interfejs
+            użytkownika
+            jest szybki i czuły, użytkownicy nie czekają na wykonanie operacji.
         </p>
 
-        <p><strong>Responsive Applications</strong> - when it's possible we prefer to build one application that adjusts
-            it's look and behaviour to runtime platform,
-            screen size and input interface. If mobile usage differs from desktop we build two separate web applications
-            using different UI frameworks. Third case is when
-            web application is not a solution for particular problem - in this case we build native mobile application
-            for better User Experience.
+        <p><strong>Aplikacje "Responsive"</strong> - gdy jest to możliwe, wolimy
+            budować jedną aplikację, która dostosowuje swój wygląd i zachowanie do platformy uruchomieniowej, rozmiaru
+            ekranu i interfejsu
+            wejściowego. Jeśli wymagania co do aplikacji mobilnej różnią się znacznie w stosunku do wymagań aplikacji
+            internetowej możemy zbudować dwie
+            oddzielne instancje przy użyciu różnych bibliotek i technologii. Trzeci przypadek jest wtedy, gdy
+            aplikacja internetowa nie jest rozwiązaniem danego problemu - w tym przypadku budujemy natywną aplikację
+            mobilną żeby uzyskać lepszą wygodą użytkowania.
         </p>
 
-        <p><strong>Cloud Services</strong> - when it's possible we use Cloud services for data storage and user
-            management (Telerik Platform, Firebase, etc.)
-            for server management simplification and lowering costs.</p>
+        <p><strong>Usługi Serwerowe w Chmurze</strong> - gdy jest to możliwe, używamy usług w
+            chmurze do przechowywania danych i zarządzania użytkownikami (Telerik Platform, Firebase itp.) co owocuje
+            znacznym uproszczeniem
+            zarządzania serwerem i obniżeniem kosztów.</p>
 
-        <p><strong>Node.js</strong> - for complicated and secure server logic we use Node.js based server applications -
-            that gives us comfort of JavaScript everywhere, simplifies maintenance,
-            lowers platform costs, empowers scalability and performance.
+        <p><strong>Node.js</strong> - do skomplikowanej logiki i lepszego bezpieczeństwa na
+            serwerze używamy Node.js - to daje nam komfort wykorzystania JavaScript w obu warstwach architektury,
+            upraszcza
+            konserwację, obniża koszty platformy, zwiększa skalowalność i wydajność.
         </p>
 
-        <p><strong>NoSQL Databases</strong> - we use modern document based databases (MongoDB, CouchDB) to simplify data
-            storage and
-            communication between tiers. NoSQL gives us freedom
-            that accelerates development and simplifies changes. When necessary we use SQL Servers like Postgress and
-            MySQL.
+        <p><strong>Bazy danych NoSQL</strong> - stosujemy nowoczesne bazy dokumentów
+            (MongoDB, CouchDB) do przechowywania danych i uproszczenie komunikacji pomiędzy
+            warstwami systemu. NoSQL daje nam wolność, która przyspiesza rozwój i ułatwia zmiany. W
+            razie potrzeby możemy użyć serwerów SQL, takich jak Postgress i MySQL.
         </p>
 
     </div>
@@ -359,7 +421,7 @@
     <div class="row">
         <div class="column">
             <h1 class="center aligned ui header">
-                What We Use And Know
+                Co Stosujemy i Na Czym Się Znamy
             </h1>
 
             <div class="ui horizontal  divider"><i class="heart red icon"></i></div>
@@ -466,7 +528,7 @@
 
 <!--------------------  FOOTER  -------------------->
 
-{% include footer.html %}
+{% include footer-pl.html %}
 
 </body>
 
