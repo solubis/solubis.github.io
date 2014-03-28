@@ -1,0 +1,25 @@
+---
+layout: blog
+title: Solubis - Mobile and Desktop Web Development
+---
+
+{% for post in site.posts %}
+
+<div class="item" data-href="{{ post.url }}">
+
+    <div class="ui label {{ post.color }}">{{ post.tag }}</div>
+    <div class="meta">{{ post.date | date_to_long_string }}</div>
+
+    <div class="content">
+
+        <div class="name">{{ post.title }}</div>
+
+        <p class="description">{{ post.description }}</p>
+
+        <p class="blue author">by {{ post.author }}</p>
+
+    </div>
+
+</div>
+
+{% endfor %}
