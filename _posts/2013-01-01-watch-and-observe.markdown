@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Syntax highlighter JavaScript"
-date:   2014-02-08 20:18:48
-description: "Syntax highliter test JavaScipt"
-tag: "JavaScript"
+title:  "Deep watching object changes in AngularJS"
+date:   2013-01-01 20:18:48
+description: "By default, when the object changes AngularJS will check the object for equality by reference.
+              That means that if you modified a property within your object, or added an item to a watched array, it will not trigger."
+tag: "AngularJS"
 color: "red"
 author: "Jurek Błaszczyk"
 ---
