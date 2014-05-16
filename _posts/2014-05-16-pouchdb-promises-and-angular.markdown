@@ -134,7 +134,7 @@ app.controller('AppController', function ($scope, Database) {
 
 ]]></script>
 
-Here is full JSFiddle with sample for this: http://jsfiddle.net/yoorek/2zt27/
+Here is full [JSFiddle with sample for this](http://jsfiddle.net/yoorek/2zt27/)
 
 So, each time we use our Database service we have to remember to run $apply.
 There is one thing we could do to make things easier.
@@ -175,6 +175,6 @@ After that we don't have to call $apply in our controllers:
 
 And our code is clearer, simpler and more error prone.
 
-Here is JSFiddle version for that: http://jsfiddle.net/yoorek/2zt27/1/
+Here is [JSFiddle version for that](http://jsfiddle.net/yoorek/2zt27/1/)
 
 
