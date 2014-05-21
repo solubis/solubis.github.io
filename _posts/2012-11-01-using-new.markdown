@@ -1,0 +1,37 @@
+---
+layout: post
+title:  ""
+date:   2014-02-08 20:18:48
+description: ""
+tag: "JavaScript"
+color: "red"
+author: "Jurek Błaszczyk"
+---
+Using new operator to define prototype considered as a bad practice.
+
+<script type="syntaxhighlighter" class="brush: javascript"><![CDATA[
+    function A () { this.x = 42; };
+    function B () {};
+    B.prototype = new A();
+    var b = new B();
+    b.x; // => 42
+    
+    // That's bad:
+    
+    b.hasOwnProperty('x'); // => false :-(
+    b.__proto__.hasOwnProperty('x'); // => true
+    
+    // Better way
+    
+    function B () { A.call(this); };
+    B.prototype = new A();
+    var b = new B();
+    b.hasOwnProperty('x'); // => true
+    
+    // Good way
+    
+    function B () { A.call(this); };
+    B.prototype = Object.create(A.prototype);
+    var b = new B();
+    b.hasOwnProperty('x'); // => true
+]]></script>
