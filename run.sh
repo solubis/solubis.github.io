@@ -1,1 +1,2 @@
-jekyll --watch server
+#!/bin/sh
+jekyll server --watch

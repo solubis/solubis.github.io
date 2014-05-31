@@ -35,3 +35,4 @@ Using new operator to define prototype considered as a bad practice.
     var b = new B();
     b.hasOwnProperty('x'); // => true
 ]]></script>
+ 

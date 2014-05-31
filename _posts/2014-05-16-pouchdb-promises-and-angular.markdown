@@ -137,10 +137,11 @@ app.controller('AppController', function ($scope, Database) {
 Here is full [JSFiddle with sample for this](http://jsfiddle.net/yoorek/2zt27/)
 
 So, each time we use our Database service we have to remember to run $apply.
-There is one thing we could do to make things easier.
+We could move $apply to 'then' clauses in our Database service, but there is one thing we can do to make things easier.
 We can package PouchDB calls in native Angular $q promises.
 For each PouchDB call we surround it with $q.when to convert it to Angular promise.
-Here is how:
+First, we are compatible with Angular @q promies, Second, when 'then' is called it is already wrapped by Angular in 'apply'.
+Here is how it works:
 
 <script type="syntaxhighlighter" class="brush: js"><![CDATA[
 Database.prototype.all = function () {
@@ -173,7 +174,7 @@ After that we don't have to call $apply in our controllers:
     };
 ]]></script>
 
-And our code is clearer, simpler and more error prone.
+And our code is clearer, simpler and less error prone.
 
 Here is [JSFiddle version for that](http://jsfiddle.net/yoorek/2zt27/1/)
 
