@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/app.css"/>
+</head>
+
+<body ng-controller="AppController as ctrl">
+
+<toaster></toaster>
+
+<script src="../dist/js/vendor.js"></script>
+<script src="../dist/js/iqui.js"></script>
+
+<script>
+    angular.module('app', ['iq.ui'])
+        .controller('AppController', function ($toast, $toaster, $timeout) {
+            $timeout(function(){
+                $toast.success('Test 1');
+                $toast.error('Test 2');
+            }, 1000);
+        });
+</script>
+
+</body>
+
+</html>

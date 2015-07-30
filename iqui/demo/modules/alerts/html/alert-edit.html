@@ -1,0 +1,188 @@
+<form role="form" novalidate name="form" class="alert-edit">
+
+    <div class="modal-header">
+        <h4 class="modal-title">Alert</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <tabset>
+
+                    <tab heading="Szczegóły" active="true">
+
+                        <div class="form-group">
+                            <label>Nazwa</label>
+                            <input class="form-control"
+                                   name="name"
+                                   minlength="5"
+                                   maxlength="255"
+                                   placeholder=""
+                                   ng-required="true"
+                                   ng-model="ctrl.alert.name">
+
+                            <div class="error-message" ng-show="form.name.$dirty && form.name.$invalid">
+                                Nazwa jest wymagana (min. 5 znaków)
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Priorytet</label>
+
+                                    <ng-form class="radio" name="priority">
+                                        <label class="radio-inline" ng-repeat="priority in ctrl.dict.priorities">
+                                            <input type="radio"
+                                                   name="priority"
+                                                   ng-value="priority.code"
+                                                   ng-model="ctrl.alert.priority">
+                                            {{priority.label}}
+                                        </label>
+                                    </ng-form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Przypisany</label>
+                            <select class="form-control"
+                                    name="assignee"
+                                    ng-options="user as user for user in ctrl.dict.users"
+                                    ng-model="ctrl.alert.assignee">
+
+                                <option value="">Nie przypisany</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Przypisany z hierarchii</label>
+
+                            <div select-hierarchy="ctrl.structure"
+                                 name="assignee"
+                                 ng-required="true"
+                                 ng-model="ctrl.alert.assignee">
+                            </div>
+
+                            <div class="error-message" ng-show="form.assignee.$dirty && form.assignee.$invalid">
+                                Przypisany jest wymagany
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Data zgłoszenia</label>
+                            <input class="form-control" disabled ng-model="ctrl.alert.creationDate">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Tekst</label>
+                            <input class="form-control" ng-model="creationDate">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Przykładowy timestamp</label>
+                            <datetimepicker ng-model="testTimestamp"
+                                            name="testTimestamp"
+                                            date-type="unix"></datetimepicker>
+                            <div class="error-message"
+                                 ng-show="form.testTimestamp.$dirty && form.testTimestamp.$invalid">
+                                Data niezgodna z formatem
+                            </div>
+                        </div>
+
+                        <div class="form-group form-inline">
+                            <label>Zakres Od</label>
+
+                            <datetimepicker ng-model="fromDate"
+                                            max-date="{{  nextDate }}"
+                                            name="fromDate">
+                            </datetimepicker>
+
+                            <label>Do</label>
+
+                            <datetimepicker ng-model="nextDate"
+                                            min-date="{{  fromDate }}"
+                                            name="nextDate">
+                            </datetimepicker>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Przykładowa data ze zmienionym formatem</label>
+
+                            <datetimepicker class="form-control"
+                                            name="testDate"
+                                            ng-model="testDate"
+                                            date-format="dd-MM-yyyy">
+                            </datetimepicker>
+
+                            <div class="error-message" ng-show="form.testDate.$dirty && form.testDate.$invalid">
+                                Data niezgodna z formatem
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Pusty timestamp bez czasu</label>
+
+                            <datetimepicker class="form-control"
+                                            name="emptyDate"
+                                            date-type="unix"
+                                            date-only="true"
+                                            ng-model="emptyDate">
+                            </datetimepicker>
+
+                            <div class="error-message" ng-show="form.emptyDate.$dirty && form.emptyDate.$invalid">
+                                Data niezgodna z formatem
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="checkbox"
+                                   name="testMode"
+                                   ng-model="ctrl.alert.testMode">
+                            <label>Tryb testowy</label>
+                        </div>
+
+                        <div class="form-group">
+                            <div toggle-switch ng-model="ctrl.alert.testMode">
+                                Tryb testowy ze switchem
+                            </div>
+                        </div>
+
+                    </tab>
+
+                    <tab heading="Opis">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                      <textarea class="form-control"
+                                                rows="10"
+                                                name="description"
+                                                placeholder="Wpisz tekst opisu"
+                                                ng-model="ctrl.alert.description"></textarea>
+                            </div>
+                        </div>
+                    </tab>
+
+                </tabset>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <input type="button"
+               class="btn btn-link"
+               value="Anuluj"
+               ng-click="$close()">
+
+        <input type="submit"
+               class="btn btn-link"
+               value="Zapisz"
+               ng-disabled="form.$invalid"
+               ng-click="ctrl.saveChanges(form)">
+    </div>
+
+</form>

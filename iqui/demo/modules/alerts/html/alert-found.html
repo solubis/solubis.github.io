@@ -1,0 +1,9 @@
+<div class="match-title">
+    Znaleziono Alert
+</div>
+<dl class="match-list">
+    <dt>Nazwa</dt>
+    <dd>{{ match.model.name }}</dd>
+    <dt>Priorytet</dt>
+    <dd>{{ match.model.priority | priority}}&nbsp;<img tooltip-append-to-body="true" ng-src="images/priority/{{ match.model.priority | priority }}.png"></dd>
+</dl>

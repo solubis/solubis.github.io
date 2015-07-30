@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>iQUI Demo</title>
+
+    <link rel="stylesheet" href="styles/app.css">
+
+</head>
+
+<body>
+
+<toaster></toaster>
+<!--------------------  Navigation Menu  -------------------->
+<div ng-include="'modules/menu/topbar.html'"></div>
+<div ng-include="'modules/menu/sidebar.html'"></div>
+
+<!--------------------  Main Container  -------------------->
+<section class="main" id="content">
+    <div ui-view class="container"></div>
+</section>
+
+<!--------------------  Scripts  -------------------->
+<script src="i18n.js"></script>
+
+<script src="../dist/js/vendor.js"></script>
+<script src="../dist/js/iqui.js"></script>
+
+<!--------------------  Application Modules  -------------------->
+<script src="require.js" data-main="app.js">
+    require(['app']);
+</script>
+
+</body>
+
+</html>
