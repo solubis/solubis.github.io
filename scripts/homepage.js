@@ -38,6 +38,7 @@ $(function () {
   $('#modal-crm').modal('attach events', '#thumb-crm', 'show');
   $('#modal-gamification-widget').modal('attach events', '#thumb-gamification-widget', 'show');
   $('#modal-gamification-mobile').modal('attach events', '#thumb-gamification-mobile', 'show');
+  $('#modal-alerter').modal('attach events', '#thumb-alerter', 'show');
 
   $('#blog').find('.item').on('click', function () {
     window.location.href = $(this).attr('data-href');
